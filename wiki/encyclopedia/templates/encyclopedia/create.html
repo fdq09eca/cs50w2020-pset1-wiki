@@ -1,0 +1,11 @@
+{% extends "encyclopedia/layout.html" %} {% block title %} {{ entry_title }}
+{%endblock %} {% block body %} {% if error %}
+<h1 style="color: red;">File existed, choose another title.</h1>
+{% endif %}
+<form action="{%url 'new_page' %}" method="post">
+  {% csrf_token %} {{ form.title.label_tag }} {{ form.title}}
+  <button type="submit">Save</button><br />
+  {{ form.content}}
+</form>
+
+{% endblock %}
