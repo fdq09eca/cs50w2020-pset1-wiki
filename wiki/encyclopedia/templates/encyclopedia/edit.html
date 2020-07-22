@@ -3,7 +3,7 @@
 <form action="{%url 'edit' title=entry_title %}" method="post">
   {% csrf_token %} {{ form }}
   <br />
-  <button type="submit">Save</button>
+  <button type="submit" class="btn-primary">Save</button>
 </form>
 
 {% endblock %}

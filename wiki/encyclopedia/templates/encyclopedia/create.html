@@ -4,7 +4,7 @@
 {% endif %}
 <form action="{%url 'new_page' %}" method="post">
   {% csrf_token %} {{ form.title.label_tag }} {{ form.title}}
-  <button type="submit">Save</button><br />
+  <button type="submit" class='btn-primary'>Save</button><br />
   {{ form.content}}
 </form>
 
